@@ -1,0 +1,494 @@
+
+* {
+  box-sizing: border-box;
+  font-family: "Reddit Sans";
+  margin: 0;
+  padding: 0;
+  
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a:hover{
+  color: var(--text-color);
+  text-decoration: none;
+  color: #b59b7a
+}
+
+
+html {
+  scroll-behavior: smooth;
+   scroll-padding-top: 110px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.reddit-sans-{
+  font-family: "Reddit Sans", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+}
+
+h1, h2, h3, p, span, li {
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+  padding: 0;
+overflow-x: hidden;
+
+}
+
+.divider {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  letter-spacing: 40px;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.animationstylesection {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animationstylesection.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+#darkModeToggle {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  padding: 0.6rem 1rem;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 999;
+  transition: background 0.3s, color 0.3s;
+}
+
+#darkModeToggle:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+}
+
+
+img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 5px;
+}
+
+img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+@media (min-width: 768px) {
+
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;   
+        max-height: 100px;          
+        display: flex;          
+        justify-content: center;  
+        background-color: #4073a9;
+        opacity: 95%;
+        z-index: 100;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 2rem 0;
+        margin: 10px;
+
+        }   
+
+    nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        }
+
+        nav a:hover {
+        transition: color 0.3s ease;
+        color: #b59b7a
+        }
+        nav a.about {
+        font-size: 1.8rem; 
+        margin-left: 30px;
+        position: relative;
+        top: -10px
+        }
+
+        #introduction { /*# for ids which you dont recycle*/
+        margin: 150px auto 40px auto;
+        display: flex;
+        overflow: hidden; /*this rounds the gifs corners*/
+        max-width: 80%;
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        background-color: #4073a9;
+        }
+
+        .introimage {
+        flex: 1; /*makes it take up only half of the section*/
+        }
+
+        .introimage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /*makes it not stretch*/
+        }
+
+        .introtext {
+        flex: 1;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        }
+
+        .introtext h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        }
+
+        /*css for the image grids*/
+        .animationstylesection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        padding: 80px 5vw;
+        flex-wrap: wrap; 
+        }
+
+   .right {
+        flex: 1;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;
+        }
+
+        .left {
+        flex: 1;
+        min-width: 300px;
+        }
+
+        .left h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        }
+
+        .desc {
+        color: var(--text-color);
+        font-size: 1rem;
+        line-height: 1.6;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        }
+
+        .CellanimeGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 1rem;
+        }
+
+        .CellanimeGrid img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        }
+
+
+    #collage {
+    max-width: 300%;
+    width: 80vw; /* or 80%, depending on your needs */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    }
+
+    }
+
+
+
+
+    
+#burger {
+  display: none;
+}
+@media (max-width: 768px) {
+
+
+
+
+nav ul {
+  flex-direction: column;
+  background-color: #4073a9;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100vh;         /* FULL PAGE HEIGHT */
+  z-index: 10;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  list-style: none;
+    opacity: 95%;
+}
+
+  nav ul.open {
+    display: flex;
+    transform: translateX(0);
+  }
+
+#burger {
+    font-size: 2.5rem;     /* Make it bigger */
+    font-weight: bold;  
+    background: none;
+    border: none;
+    color: var(--text-color);;
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    left: 1rem;
+    display: block;
+  }
+
+  nav a {
+    color: var(--text-color);;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+
+        nav a:hover {
+        transition: color 0.3s ease;
+        color: #b59b7a
+        }
+
+    nav ul {
+        padding-top: 6rem;
+        list-style: none;
+    }
+    nav ul li{
+         margin-bottom: 1.5rem;
+    }
+
+
+  
+    #introduction { /*# for ids which you dont recycle*/
+        display: flex;
+        flex-direction: column;
+        overflow: hidden; /*this rounds the gifs corners*/
+        max-width: 80%;
+        margin: 80px auto 40px auto;
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        background-color: #5d95d0;
+        
+    }
+
+    .introimage {
+        flex: 1; /*makes it take up only half of the section*/
+        }
+
+    .introimage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /*makes it not stretch*/
+        }
+
+    .introtext {
+        flex: 1;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        }
+
+    .introtext h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        }
+
+
+        /*css for the image grids*/
+        .animationstylesection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        padding: 80px 5vw;
+        flex-wrap: wrap; 
+        margin-left: 10px;
+        }
+
+        .right {
+        flex: 1;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;
+        }
+
+        .left {
+        flex: 1;
+        min-width: 300px;
+        }
+
+        .left h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        }
+
+        .desc {
+        color: var(--text-color);
+        font-size: 1rem;
+        line-height: 1.6;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        }
+
+        .CellanimeGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 1rem;
+        margin-top: 0;
+        }
+
+        .CellanimeGrid img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        max-height: 100px;
+        }
+
+    #collage {
+
+    width: 140vw; /* or 80%, depending on your needs */
+
+    }
+
+}
+
+/*career section card*/
+.careers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.careercard:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.careercard h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: var(--bg-color);
+}
+
+.careercard p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 8px 0;
+    color: var(--bg-color);
+}
+
+.careercard {
+  background-color: var(--text-color);
+  border-radius: 16px;
+  padding: 20px;
+  width: 280px;
+  height: 400px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.end {
+  background-color: #5d95d0;
+  color: var(--text-color);
+  padding: 20px 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.end ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none; 
+  margin: 0;
+  padding: 0 40px;
+  flex-wrap: wrap;
+}
+
+.end li {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.end li:first-child {
+  text-align: left;
+}
+
+.end li:last-child {
+  text-align: center;
+}
+
